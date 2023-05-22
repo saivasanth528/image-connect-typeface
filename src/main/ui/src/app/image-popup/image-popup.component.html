@@ -1,0 +1,25 @@
+<div class="image-popup">
+    <div class="image-popup-content">
+      <span class="close" (click)="onClose()">&times;</span>
+      <img class="image-popup-image" [src]="image" [alt]="caption">
+      <div class="image-popup-text">
+        <h3 class="image-popup-title">{{ text }}</h3>
+        <p class="image-popup-caption">{{ caption }}</p>
+        <div class="comment-section">
+          <h4 class="comment-heading">Comments:</h4>
+          <ul class="comment-list">
+            <li *ngFor="let comment of comments">
+              <div class="comment-box">
+                <div class="comment-content">{{ comment.text }}</div>
+                <div class="comment-date">Commented by: {{ comment.user.username }}</div>
+                <div class="comment-date">Commented at: {{ comment.updatedAt | date:'MMM dd, yyyy HH:mm' }}</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <textarea [(ngModel)]="newComment"></textarea>
+        <button (click)="addComment()">Add Comment</button>
+      </div>
+    </div>
+  </div>
+  
