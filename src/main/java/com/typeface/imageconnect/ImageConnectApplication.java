@@ -43,26 +43,26 @@ public class ImageConnectApplication {
 
 
 
-	@PreDestroy
-	public void deleteAllRecords() {
-		userService.deleteAllRecords();
-		imageShareService.deleteAllRecords();
-		imageService.deleteAllRecords();
-		commentService.deleteAllRecords();
-		notificationService.deleteAllRecords();
-
-	}
+//	@PreDestroy
+//	public void deleteAllRecords() {
+//		userService.deleteAllRecords();
+//		imageShareService.deleteAllRecords();
+//		imageService.deleteAllRecords();
+//		commentService.deleteAllRecords();
+//		notificationService.deleteAllRecords();
+//
+//	}
 
 	/**
 	 * This script will do the heavy lifting of generating and sharing the data
 	 */
-
-	@PostConstruct
-	public void startUpScript() {
-		userService.createDummyUsers();
-		imageService.uploadImagesToS3AndAssignOwners();
-		imageShareService.shareImages();
-	}
+//
+//	@PostConstruct
+//	public void startUpScript() {
+//		userService.createDummyUsers();
+//		imageService.uploadImagesToS3AndAssignOwners();
+//		imageShareService.shareImages();
+//	}
 
 
 
