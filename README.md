@@ -63,6 +63,7 @@ mvn spring-boot:run
 - Navigate to http://localhost:4200/users/user1/shared to test the system
 - For the simplicity i am creating only 11 users in my system, each user owns the 80 images, each user shares 80 images with 10 users , so on owned tab he can see 80 images and 800 images in shared tab, these can be configured in the application.properties
 - Why i have done this because of uplaoding the images to s3 takes lot of time. So, i have done it for 11 users only
+- - I have hardcoded the url in the user to **user1**, you can change it to **user2, user10** like that, then click on the owned or shared if the url gets reset, please do it like that
 
 
 ## My Progress
