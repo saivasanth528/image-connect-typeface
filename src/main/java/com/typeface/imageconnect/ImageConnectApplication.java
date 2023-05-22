@@ -45,11 +45,13 @@ public class ImageConnectApplication {
 
 	@PreDestroy
 	public void deleteAllRecords() {
-		userService.deleteAllRecords();
+		log.info("Deleting the records");
+		notificationService.deleteAllRecords();
+		commentService.deleteAllRecords();
 		imageShareService.deleteAllRecords();
 		imageService.deleteAllRecords();
-		commentService.deleteAllRecords();
-		notificationService.deleteAllRecords();
+		userService.deleteAllRecords();
+		log.info("Deletion complete");
 
 	}
 
